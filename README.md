@@ -84,7 +84,7 @@ Write a function that produces the following result:
 `Diego knows: Javascript, ReactJS, Redux.`
 `Gabriel knows: VueJS, Ruby on Rails, Elixir.`
 
-<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
 ### Module 2 - Manipulating the DOM :v:
 
@@ -116,7 +116,7 @@ From the following vector:
 var names = ["Diego", "Gabriel", "Lucas"];
 ```
 
-Fill in a list (<ul>) in HTML with the items as follows:
+Fill in a list `<ul>` in HTML with the items as follows:
 
 ● Diego
 ● Gabriel
