@@ -9,7 +9,7 @@
 <p align="center">This project is just the final exercises of each Rocketseat Javascript course module <a href="https://skylab.rocketseat.com.br/journey/starter">JavaScript Starter</a> 🎓
 </p>
 
-### Module 1 - JavaScript Introduction :point_up:
+## Module 1 - JavaScript Introduction :point_up:
 
 <h3>Exercise One</h3>
 Create a function that gives the following object:
@@ -86,7 +86,7 @@ Write a function that produces the following result:
 
 <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
-### Module 2 - Manipulating the DOM :v:
+## Module 2 - Manipulating the DOM :v:
 
 <h3>Exercise One</h3>
 Create a button that when clicked creates a new canvas element in the shape of a square
@@ -136,6 +136,72 @@ other previous items. In addition, the content of the input must be deleted afte
 
 <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
-### Module 4 - Asynchronous JS :v:
+## Module 4 - Asynchronous JS :v:
 
 <h3>Exercise One</h3>
+Create a function that receives the age of a user and returns a Promise that after 2
+seconds will return if user is over 18 or not. If the user is over 18 years old
+the result should fall in `.then,`, otherwise in `.catch`
+
+```
+function checkAge(age) {
+ // return a promise
+}
+checkAge(20)
+ .then(function() {
+ console.log("Older than 18");
+ })
+ .catch(function() {
+ console.log("Minor than 18");
+ });
+
+```
+
+<h3>Exercise Two</h3>
+Create a screen with an `<input>`  that should receive the name of a user on Github. After entering the
+username and clicking the search application button should search for the Github API (as
+URL below) the user repository data and display it on screen:
+
+Example URL: https://api.github.com/users/diego3g/repos
+
+Just change "diego3g" by the user name.
+
+```
+<input type="text" name="user">
+<button onclick="">Add</button>
+```
+
+After filling in the input and adding, the following list should appear below:
+
+```
+<ul>
+ <li>repo1</li>
+ <li>repo2</li>
+ <li>repo3</li>
+ <li>repo4</li>
+ <li>repo5</li>
+</ul>
+```
+
+<h3>Exercise Three</h3>
+From the result of the previous example, add a screen loading indicator instead from the list only while the request is in progress:
+
+```
+<li>Loading...</li>
+```
+
+Also, add an error message on screen if the user on Github does not exist.
+
+Tip: When the user does not exist, the request will fall into the .catch with error code 404
+
+## Contributing
+
+1.  Fork the project
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the branch (`git push origin feature/AmazingFeature`)
+5.  Open a pull request
+
+## License
+
+![MIT](https://img.shields.io/badge/License-MIT-blue.svg)
