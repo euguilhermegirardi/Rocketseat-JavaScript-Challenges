@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 2</title>
+  </head>
+  <body>
+    <!--  -->
+    <button onClick="handleBtn()" style="width: 150px; height: 40px;">
+      Create square
+    </button>
+
+    <!--  -->
+    <input type="text" name="inputName" />
+    <button onClick="add()">Add</button>
+
+    <script>
+      // Exercise One and Two
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      function handleBtn() {
+        var square = document.createElement("div");
+        square.style.backgroundColor = "#FF0000";
+        square.style.height = "100px";
+        square.style.width = "100px";
+        square.style.margin = "15px";
+        square.onmouseover = function changeColor() {
+          square.style.backgroundColor = getRandomColor();
+        };
+        var siteBody = document.body;
+        siteBody.appendChild(square);
+      }
+
+      // Exercise Three
+      var names = ["Diego", "Gabriel", "Lucas"];
+
+      // Create the new UL
+      var list = document.createElement("ul");
+
+      names.forEach((eachName) => {
+        // Create the new LI
+        var itemList = document.createElement("li");
+
+        // Assign 'itemList' to 'eachName'
+        itemList.innerHTML = eachName;
+
+        // Add the item to the UL
+        list.appendChild(itemList);
+      });
+
+      var bodySite = document.body;
+      bodySite.appendChild(list);
+
+      // Exercise Four
+      function add() {
+        // Create the new LI
+        var itemList = document.createElement("li");
+
+        // Get 'itemList'
+        var inputName = document.getElementsByName("inputName")[0];
+
+        // Assign 'itemList' to 'inputName.value'
+        itemList.innerHTML = inputName.value;
+
+        // Clear input after add the item
+        inputName.value = "";
+
+        // Add the item to the UL
+        list.appendChild(itemList);
+      }
+    </script>
+  </body>
+</html>

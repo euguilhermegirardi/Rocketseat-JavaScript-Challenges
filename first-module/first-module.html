@@ -1,0 +1,111 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Challenge 1</title>
+  </head>
+  <body>
+    <script>
+      // <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+      var address = {
+        street: "Rua dos Pinheiros",
+        number: 1293,
+        city: "Sao Paulo",
+        state: "SP",
+      };
+
+      function end() {
+        console.log("1° Exercise");
+
+        console.log(
+          "The developer lives in " +
+            address.city +
+            "/" +
+            address.state +
+            ", street '" +
+            address.street +
+            "' number " +
+            address.number +
+            "."
+        );
+      }
+
+      end(address);
+
+      // <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+      // The remainder operator (%) returns the remainder left over when one operand is divided by a second operand.
+      // It always takes the sign of the dividend.
+      function evenNumbers(x, y) {
+        console.log("2° Exercise");
+
+        for (var i = x; i <= y; i++) {
+          // console.log(i);
+          if (i % 2 === 0) {
+            console.log(i);
+          }
+        }
+      }
+
+      evenNumbers(0, 20);
+
+      // <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+      var skills = ["Javascript", "ReactJS", "React Native"];
+
+      var result = hasAbility(skills, "Javascript");
+
+      function hasAbility(skills, find) {
+        console.log("3º Exercise");
+
+        return console.log(skills.indexOf(find) >= 0);
+      }
+
+      // <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+      function exp(years) {
+        console.log("4º Exercise");
+        if (years <= 1) {
+          return "Beginner";
+        }
+        if (years > 1 && years <= 3) {
+          return "Intermediary";
+        }
+        if (years > 3 && years <= 6) {
+          return "Advanced";
+        } else {
+          return "Jedi Master";
+        }
+      }
+      var studiedYears = 10;
+      var aux = exp(studiedYears);
+      console.log(aux);
+      console.log();
+
+      // <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+      var users = [
+        {
+          name: "Diego",
+          abilities: ["Javascript", "ReactJS", "Redux"],
+        },
+        {
+          name: "Gabriel",
+          abilities: ["VueJS", "Ruby on Rails", "Elixir"],
+        },
+      ];
+
+      function show() {
+        console.log("5º Exercise");
+
+        for (each of users) {
+          console.log(each.name + " knows: " + each.abilities.join(", "));
+        }
+      }
+
+      show(users);
+    </script>
+  </body>
+</html>
