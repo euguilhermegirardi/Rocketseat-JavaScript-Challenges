@@ -84,6 +84,8 @@ Write a function that produces the following result:
 `Diego knows: Javascript, ReactJS, Redux.`
 `Gabriel knows: VueJS, Ruby on Rails, Elixir.`
 
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
 ### Module 2 - Manipulating the DOM :v:
 
 <h3>Exercise One</h3>
