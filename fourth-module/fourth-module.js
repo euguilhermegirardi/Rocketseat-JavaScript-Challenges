@@ -1,4 +1,5 @@
-const isMajor = age => {
+// First exercise
+const checkAge = age => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       age >= 18 ? resolve() : reject();
@@ -6,7 +7,7 @@ const isMajor = age => {
   });
 };
 
-isMajor(8)
+checkAge(19)
   .then(function() {
     console.log("Older than 18");
   })
@@ -14,15 +15,21 @@ isMajor(8)
     console.log("Minor than 18");
   });
 
+
+// Second exercise
 var inputName = document.getElementById("user");
 var dataList = document.querySelector("ul");
-const getUserRepo = name => {
+
+const getUserRepo = () => {
   var user = inputName.value;
+
   if (!user) {
     renderError();
-    alert("Fill up the field.");
+    alert("Fill up the input field.");
   }
+
   renderLoading();
+
   axios
     .get(`https://api.github.com/users/${user}/repos`)
     .then(response => {
@@ -42,20 +49,9 @@ function renderLoading(loading) {
   dataList.appendChild(loadingElement);
 }
 
-function renderError(loading) {
-  dataList.innerHTML = "";
-  var user = inputName.value;
-  var msgUserEmpty = !user ? "Fill up the user" : "Error!";
-
-  var textElement = document.createTextNode(msgUserEmpty);
-  var errorElement = document.createElement("li");
-  errorElement.style.color = "#F00";
-  errorElement.appendChild(textElement);
-  dataList.appendChild(errorElement);
-}
-
 const fillList = repositories => {
   console.log("TCL: repositories", repositories);
+
   dataList.innerHTML = "";
 
   for (repo of repositories) {
@@ -66,3 +62,17 @@ const fillList = repositories => {
     dataList.appendChild(repoItem);
   }
 };
+
+function renderError() {
+  dataList.innerHTML = "";
+  var user = inputName.value;
+  var msgUserEmpty = !user ? "Fill up the input field" : "Error!";
+
+  var textElement = document.createTextNode(msgUserEmpty);
+  var errorElement = document.createElement("li");
+  errorElement.style.color = "#F00";
+  errorElement.appendChild(textElement);
+  dataList.appendChild(errorElement);
+}
+
+
